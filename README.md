@@ -1,2 +1,2 @@
 # Strings-in-Js
-String Practice
+String Practice & Github fetching and commiting.
