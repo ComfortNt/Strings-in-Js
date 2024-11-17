@@ -6,11 +6,89 @@
     <title>Variables in Js</title>
     <style>
 
+    
     </style>
 </head>
 <body>
 
+  <p> Add Items to Cart.</p>
+
+     <button onclick="
+        cartVal = cartVal;
+        console.log(`Cart Quantity:${cartVal}`) "> 
+    Show Cart
+    </button>
+
+    <button onclick="
+    // We take the current value (0) then reassign it to the value on Memory so we dont get the same value repeating itself.
+        cartVal += 1;
+        console.log(cartVal);
+    "> 
+        Add to Cart
+    </button>
+
+    <button onclick="
+        cartVal += 2;
+        console.log(cartVal);
+    "> 
+        Add 2x to Cart
+    </button>
+
+    <button onclick="
+    cartVal += 3;
+    console.log(cartVal);
+    "> 
+        Add 3x to Cart
+    </button>
+
+    <button onclick="
+    cartVal = 0;
+    console.log('Cart was reset.');
+    console.log(cartVal);    
+    " > 
+        Reset Cart
+    </button>
+    
     <script>
+
+        // The different ways to create a variable in Js. var,let and const.
+
+        let age = 22; 
+        console.log(age + 1); // logs 23.
+
+        age = 22; // we change the current age(23) back to 22.
+        console.log(age + 1); // logs 23 again.
+
+        // note that const variables cannot be changed later
+
+        const age_ = 23; // We cannot reassign the age_ value this will create an error.
+       // let age_ = 22; <--- returns an error.
+
+       // always use const but if you want to modify the value of your variable use let.
+        
+       // Variable reassignment exercise!
+       //  cartVal = cartVal + 1 Is equal to cartVal+=1 Or cartVal++
+
+       let cartVal = 0;
+
+       // More Exercise
+
+       const myName = 'Mcedisi Ntiwane';
+       console.log(` Hi, my name is ${myName}`);
+       /////////////////////////////////////////////////
+
+       const soup = 10.99;
+       const bagles = 5.99;
+       const coffie = 7.99;
+
+       let cost = soup + bagles + coffie;
+
+       const taxes = cost * 0.1;
+       cost+= taxes;
+
+       console.log((cost));
+
+
 
     </script>
 </body>
