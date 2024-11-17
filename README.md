@@ -1,2 +1,7 @@
 # Strings-in-Js
-String Practice & Github fetching and commiting.
+Learning Javascript & Github.
+
+Lesson 1 :String Practice
+Lesson 2 :Variables
+
+
