@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Calculator</title>
+</head>
+<body>
+    <p>Variable Calculator</p>
+
+
+
+     <!-----------------------We add string 1(addOne into the string and update the val of calculation from '' to 1.)------------------>
+    <button onclick='
+    calculation += addOne;
+    console.log(calculation);
+    
+    '>
+        1
+    </button>
+    <!-------------------------We add string 2(addTwo into the string and update the val of calculation from '' to 2.)---------------------------->
+    <button onclick='
+    calculation += addTwo;
+    console.log(calculation);
+    '>
+        2
+    </button>
+   <!------------------------We add string 3(addThree into the string and update the val of calculation from '' to 3.)----------------------------->
+    <button onclick='
+    calculation += addThree;
+    console.log(calculation);
+    '>
+        3
+    </button>
+    <!------------------------We add string + (we concat any number clicked with a + symbol to make a calculation).----------------------------->
+    <button onclick='
+    calculation += " +" + " ";
+    console.log(calculation);
+    '>
+        +
+    </button>
+    <!----------------after the + and a secondary number is selected take the upated calculation variable eg ( 1+1), use ecval() to calculate strings then clear the calculation value.------------->
+    <button onclick='
+    console.log(eval(calculation));
+    calculation="";
+    '>
+        =
+    </button>
+
+    <script>
+
+        const addOne = '1';
+        const addTwo = + '2';
+        const addThree ='3';
+
+        let calculation='';
+
+
+    </script>
+
+</body>
+</html>
