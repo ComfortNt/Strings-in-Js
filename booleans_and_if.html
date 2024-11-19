@@ -7,10 +7,111 @@
 </head>
 <body>
 
+    <p> Rock Paper Scissors</p>
 
+    <button onclick="
 
+    compMove ='';
+    playerMove = 'rock';
+    randomNum = Math.random(); // generates a positive number greater than or equal to 0 and less than 1;
+
+    if(randomNum >= 0 && randomNum < 1/3){
+
+        compMove ='rock';
+
+    }else if( randomNum >= 1/3 && randomNum < 2/3){
+
+        compMove = 'paper';
+
+    }else if(randomNum >= 2/3 && randomNum < 1){
+
+       compMove ='scissors';
+    };
+
+    console.log(compMove);
+    
+
+    if( compMove === 'rock'){
+        alert(`Game Drawn \n Comp move ${compMove} vs Player move ${playerMove}`);
+    }
+    else if( compMove === 'paper'){
+        alert(`Game Lost \n Comp move ${compMove} vs Player move ${playerMove}`);
+
+    }else if( compMove === 'scissors'){
+        alert(`Game Won \n Comp move ${compMove} vs Player move ${playerMove}`);
+    }
+    " >
+        Rock
+    </button>
+
+    <button onclick=" 
+
+    compMove ='';
+    playerMove = 'paper';
+    randomNum = Math.random(); 
+  
+    if(randomNum >= 0 && randomNum < 1/3){
+        compMove ='rock';
+
+    }else if( randomNum >= 1/3 && randomNum < 2/3){
+        compMove = 'paper';
+
+    }else if(randomNum >= 2/3 && randomNum < 1){
+       compMove ='scissors';
+    };
+
+    console.log(compMove);
+    
+
+    if( compMove === 'rock'){
+        alert(`Game Won \n Comp move ${compMove} vs Player move ${playerMove}`);
+    }
+    else if( compMove === 'paper'){
+        alert(`Game Drawn \n Comp move ${compMove} vs Player move ${playerMove}`);
+
+    }else if( compMove === 'scissors'){
+        alert(`Game Lost \n Comp move ${compMove} vs Player move ${playerMove}`);
+    };">
+    Paper
+    </button>
+
+    <button onclick=" 
+
+    compMove =''; // We reset the value in memory with every button click,
+    playerMove = 'scissors';// The players move.
+    randomNum = Math.random(); // This code Gnerates a positive number greater than or equal to 0 and less than 1;
+  
+    if(randomNum >= 0 && randomNum < 1/3){
+        compMove ='rock';
+
+    }else if( randomNum >= 1/3 && randomNum < 2/3){
+        compMove = 'paper';
+
+    }else if(randomNum >= 2/3 && randomNum < 1){
+       compMove ='scissors';
+    };
+
+    console.log(compMove);
+    
+
+    if( compMove === 'rock'){
+        alert(`Game Lost \n Comp move ${compMove} vs Player move ${playerMove}`);
+    }
+    else if( compMove === 'paper'){
+        alert(`Game Won \n Comp move ${compMove} vs Player move ${playerMove}`);
+
+    }else if( compMove === 'scissors'){
+        alert(`Game Drawn \n Comp move ${compMove} vs Player move ${playerMove}`);
+    };
+    " >
+        Scissors
+    </button>
 
     <script>
+
+    let compMove;
+    let playerMove;
+    let randomNum;
         
     </script>
     
