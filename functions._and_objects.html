@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in Js</title>
+</head>
+<body>
+
+    <p>Functions</p>
+    <script>
+
+        //tax
+
+        function calculateTax(tax){
+            console.log(tax * 0.15);  
+        };
+        calculateTax(31000);
+
+        // convertTofehrenheit
+        function degreesTofehren(degrees){
+          const temp = (degrees * 9/5) + 32;
+          return temp;
+        };
+        console.log(degreesTofehren(25));
+
+        ////obj
+
+        const converObj = {
+
+            name : 'bee1',
+            likes : 'honey',
+            worksFor: 'Queen',
+            branch : {
+                pollenUnit : 6,
+                id: 334453,
+                shifts: 'everyday'
+            }
+        };
+
+        /// Json or Javascript Object notation. Its a bulit in object of Js popular methods are parse() and stringify()
+
+        // converts a Js object to JSON
+        console.log(JSON.stringify(converObj));
+
+        const json = JSON.stringify(converObj);
+
+        // converts JSON into a javascript object
+         console.log(JSON.parse(json));
+         
+    </script>
+    
+</body>
+</html>
