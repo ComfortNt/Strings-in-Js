@@ -31,6 +31,9 @@
     playerMove = 'scissors';
     pickMove();
     chosenMove();
+
+    console.log();
+    
     " >
         Scissors
     </button>
@@ -40,6 +43,10 @@
     let compMove;
     let playerMove;
     let randomNum;
+
+    // This coverts the json score into an object
+    const score = JSON.parse(localStorage.getItem('gameScore'));
+    
 
     function pickMove(){
     compMove ='';
@@ -58,15 +65,24 @@
     // This function compares the moves and announces the winnwer. 
     function chosenMove(){
 
-        if( compMove === 'rock'){
-            alert(`Game Lost \n Comp move ${compMove} vs Player move ${playerMove}`);
-        }
-        else if( compMove === 'paper'){
-            alert(`Game Won \n Comp move ${compMove} vs Player move ${playerMove}`);
+        if( playerMove === 'rock' && compMove === 'paper' || playerMove === 'scissors' && compMove === 'rock' || playerMove === 'paper' && compMove === 'scissors'){
 
-        }else if( compMove === 'scissors'){
-            alert(`Game Drawn \n Comp move ${compMove} vs Player move ${playerMove}`);
+            alert(`Game Lost \n Computer move ${compMove} vs Player move ${playerMove} 
+            \n score: Wins:${score.win} | Draws:${score.draw}  | Losses:${score.loss+=1}`);
+
+        }
+        else if(playerMove === 'rock' && compMove === 'scissors' || playerMove === 'scissors' && compMove === 'paper' || playerMove === 'paper' && compMove === 'rock'){
+
+            alert(`Game Won \n Computer move ${compMove} vs Player move ${playerMove}
+            \n score: Wins:${score.win+=1} | Draws:${score.draw}  | Losses:${score.loss}`)
+
+        }else if( compMove === playerMove){
+            alert(`Game Drawn \n Computer move ${compMove} vs Player move ${playerMove}
+            \n score: Wins:${score.win} | Draws:${score.draw+=1}  | Losses:${score.loss}`)
         };
+
+        // inputs the score into the empty score object being parsed
+        localStorage.setItem('gameScore' , JSON.stringify(score));
     }; 
 
         
