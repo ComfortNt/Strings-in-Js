@@ -7,7 +7,21 @@
 </head>
 <body>
 
-    <p>Functions</p>
+    <p>Functions and objects. Coin flip Game</p>
+
+    <button onclick=" 
+    player ='heads';
+    generateFlip();
+     ">
+        heads
+    </button>
+
+    <button onclick="
+    player='tales';
+    generateFlip();  ">
+        tails
+    </button>
+
     <script>
 
         //tax
@@ -23,9 +37,7 @@
           return temp;
         };
         console.log(degreesTofehren(25));
-
         ////obj
-
         const convertObj = {
 
             name : 'bee1',
@@ -37,20 +49,45 @@
                 shifts: 'everyday'
             }
         };
-
         /// Json or Javascript Object notation. Its a bulit in object of Js popular methods are parse() and stringify()
-
         // converts a Js object into JSON
         console.log(JSON.stringify(convertObj));
-
         const objTojson = JSON.stringify(convertObj);
-
         // converts JSON into a javascript object
          console.log(JSON.parse(objTojson));
 
-         
 
         ///
+
+        let player;
+        let coin;
+        let score = JSON.parse(localStorage.getItem('liveScore')) ||  { win:0,loss:0};
+
+
+        function generateFlip (){
+        let coinValue = Math.random();
+        if( coinValue >= 0 && coinValue <= 1/2){
+            coin = 'heads'
+        }else{
+            coin = 'tales'
+        };
+
+        if( coin === player){
+            alert(`You Win : Player:${player} Vs Computer:${coin}
+            \n Score: Win:${score.win+=1} Loss:${score.loss}`);
+
+        }else{
+            alert(`You Loss : Player:${player} Vs Computer:${coin}
+            \n Score: Win:${score.win} Loss:${score.loss+=1}`);
+        };
+            localStorage.setItem('liveScore', JSON.stringify(score));
+        };
+
+        
+        
+
+    
+        
          
     </script>
     
