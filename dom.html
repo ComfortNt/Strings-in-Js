@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    
+    <button>
+        use Dom.
+    </button>
+
+    <button class="js-btn">
+        button2
+    </button>
+
+
+    <script>
+        /*
+        const text = {
+
+            goal : {
+                prime(){
+                    alert('hi');
+                }
+            }
+        };
+        eg of the relationship between the document(Object) and its property(body)
+        text.goal.prime(); */
+
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button')
+            .innerHTML = 'new Button';
+
+        document.querySelector('.js-btn')
+            .innerHTML = 'Html to Object';
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+</head>
+<body>
+    
+
+    <button onclick="subscribe();" class="js-subscribe">
+        Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders Under $40 = $+10 shipping</p>
+    <p>Orders over $40 = are free</p>
+
+    <form action="">
+        <input type="text" class="js-fees" placeholder="$00,00"> <br><br>
+        <input type="button" value="Calculate" onclick="calculate();">
+    </form>
+
+    <p class="js-shipping"></p>
+
+    <script>
+
+
+        const subscribeElement = document.querySelector('.js-subscribe');
+        function subscribe(){
+
+            if(subscribeElement.innerText === 'Subscribe'){
+                subscribeElement.innerText = 'Subscribed'
+                subscribed = true
+                
+            }else{
+                 subscribeElement.innerText = 'Subscribe'
+                 subscribed = false
+            
+            };
+            
+        };
+        
+        
+        function calculate(){
+        // declare input value in the fucntion so as not to select a blank inputbox value.
+        const inputElement = document.querySelector('.js-fees');
+        let cost = Number(inputElement.value); 
+          
+        if(cost < 40){ 
+            cost = cost + 10;
+        };
+        
+        document.querySelector('.js-shipping').innerHTML = `$${cost}`;
+        };
+
+
+
+    </script>
+</body>
+</html>
