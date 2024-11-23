@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & loops</title>
+</head>
+<body>
+    
+    <input type="text" class="js-list">
+
+    <div class="display"></div>
+    <br><br>
+
+    <button onclick="addItem();"> add</button>
+
+
+<script>
+
+/*
+    const itemList = [];
+    const items = document.querySelector('.js-list');
+    const display = document.querySelector('.display');
+    let singleItem ='';
+
+
+    function addItem(){
+    const item = items.value;
+    itemList.push(item);
+
+    for(let i = 0 ; i < itemList.length - 1 ; i++){
+    
+    singleItem += `<p>${itemList[i]}</p>`};
+
+    display.innerHTML = singleItem;
+
+    }; */
+
+    // Advanced functions
+    setTimeout( function(){
+        console.log('hi');
+    }, 7000);
+    // settimeout will run the callback after 7seconds
+    setInterval( function(){
+        console.log('i just loop.'); 
+    }, 4000);
+    // setInterval will keep running the callback at the specified interval (every 4seconds)
+    
+    const arrow = ()=> console.log('im an arrow fun');
+    arrow();
+    
+</script>
+</body>
+</html>
