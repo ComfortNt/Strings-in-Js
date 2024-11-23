@@ -47,14 +47,12 @@
         const inputElement = document.querySelector('.js-fees');
         let cost = Number(inputElement.value); 
           
-        if(cost < 40){ 
-            cost += 10;
-        };
+        if(cost < 40){cost += 10;};
         
         document.querySelector('.js-shipping').innerHTML = `$${cost}`;
         };
 
-
+        
 
     </script>
 </body>
