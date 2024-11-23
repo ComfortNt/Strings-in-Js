@@ -48,7 +48,7 @@
         let cost = Number(inputElement.value); 
           
         if(cost < 40){ 
-            cost = cost + 10;
+            cost += 10;
         };
         
         document.querySelector('.js-shipping').innerHTML = `$${cost}`;
