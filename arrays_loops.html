@@ -21,6 +21,7 @@
 
     const todoList = ['1','2'];
     let htmlAccum = '';
+    const paraElement = document.querySelector('.js-array-item');
 
 
     function render(){
@@ -35,7 +36,7 @@
     function addItem(){
     
     const inputElement = document.querySelector('.js-item');
-    const paraElement = document.querySelector('.js-array-item');
+    
     let item = inputElement.value;
     
     todoList.push(item);
